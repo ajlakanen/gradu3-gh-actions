@@ -10,8 +10,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% CLASS DECLARATION
 
-\def\graduclsdate{2017/11/30}
-\def\graduclsversion{3.7}
+\def\graduclsdate{2018/10/12}
+\def\graduclsversion{3.8}
 \def\gradu@fileinfo{JY tietotekniikan gradut}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{gradu3}[\graduclsdate\space\graduclsversion\space\gradu@fileinfo]
@@ -415,7 +415,7 @@
       \noindent\textbf{Ty\"o:} {%
         \gradu@HeadToUpper\gradu@type%
       }\par%
-      \gradu@bsc@optional{Suuntautumisvaihtoehto}{studyline}%
+      \gradu@bsc@optional{Opintosuunta}{studyline}%
       \noindent\textbf{Sivum\"a\"ar\"a:} \gradu@MainPageCount+\gradu@AppPageCount\par%
       \noindent\textbf{Tiivistelm\"a:} \gradu@tiivistelma\par%
       \noindent\textbf{Avainsanat:} \gradu@avainsanat\par%

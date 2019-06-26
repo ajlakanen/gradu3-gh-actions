@@ -10,8 +10,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% CLASS DECLARATION
 
-\def\graduclsdate{2018/10/12}
-\def\graduclsversion{3.8}
+\def\graduclsdate{2019/06/26}
+\def\graduclsversion{3.9}
 \def\gradu@fileinfo{JY tietotekniikan gradut}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{gradu3}[\graduclsdate\space\graduclsversion\space\gradu@fileinfo]
@@ -52,6 +52,8 @@
 
 \DeclareOption{draft}{\PassOptionsToClass{\CurrentOption}{report}}
 \DeclareOption{final}{\PassOptionsToClass{\CurrentOption}{report}}
+\DeclareOption{oneside}{\PassOptionsToClass{\CurrentOption}{report}}
+\DeclareOption{twoside}{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 
@@ -185,6 +187,9 @@
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% BASIC FORMATTING
+
+% make twoside behave the same as oneside
+\raggedbottom
 
 % This matches Word 1.5 line spacing in our empirical tests.
 \renewcommand{\baselinestretch}{1.43}  

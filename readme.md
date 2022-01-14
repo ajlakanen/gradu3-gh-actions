@@ -1,6 +1,13 @@
+# First
+
+Read the malliopas.tex.
+
+Lue ensin malliopas.tex.  Se auttaa sinua oppimaan LaTeXin ja kandi/gradupohjan käyttöä.
+
 # Software you'll need:
-* latex
+* latex or pdflatex
 * biber
+
 
 # How to run it:
 ```

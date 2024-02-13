@@ -57,6 +57,19 @@
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 
+% Define ifxetexorluatextrue
+\RequirePackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% REQUIRED PACKAGES
@@ -65,13 +78,22 @@
 \RequirePackage{ifthen}
 \RequirePackage{chngcntr}
 \RequirePackage{everyshi}[1994/12/09]
-\RequirePackage{inputenc}
-\RequirePackage[T1]{fontenc}
 \RequirePackage[left=35mm,right=20mm,top=35mm,bottom=35mm,nohead]{geometry}
 \RequirePackage[finnish,english]{babel}
-\RequirePackage{mathptmx}
-\RequirePackage[scaled=.92]{helvet}
-\RequirePackage{courier}
+\ifxetexorluatex
+  \RequirePackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont[
+    Ligatures=NoCommon
+  ]{TeX Gyre Cursor}
+\else
+  \RequirePackage{inputenc}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{mathptmx}
+  \RequirePackage[scaled=.92]{helvet}
+  \RequirePackage{courier}
+\fi
 \ifgradu@stdbib
 \RequirePackage[authordate,backend=biber,sortlocale=\gradu@sortlocale,noibid]{biblatex-chicago}
 \fi

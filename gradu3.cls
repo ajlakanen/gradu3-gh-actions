@@ -99,6 +99,7 @@
   \RequirePackage[scaled=.92]{helvet}
   \RequirePackage{courier}
 \fi
+\RequirePackage{csquotes}
 \ifgradu@stdbib
 \RequirePackage[authordate,backend=biber,sortlocale=\gradu@sortlocale,noibid]{biblatex-chicago}
 \fi

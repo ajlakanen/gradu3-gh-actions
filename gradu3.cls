@@ -74,7 +74,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% REQUIRED PACKAGES
 
-\RequirePackage{fixltx2e}
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname IncludeInRelease\endcsname\relax
+  \usepackage{fixltx2e}
+\fi
 \RequirePackage{ifthen}
 \RequirePackage{chngcntr}
 \RequirePackage{everyshi}[1994/12/09]

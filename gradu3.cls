@@ -36,10 +36,12 @@
 \DeclareOption{finnish}{%
   \def\selectdefaultlanguage{\selectlanguage{finnish}}%
   \def\gradu@sortlocale{fi}%
+  \PassOptionsToPackage{main=finnish}{babel}
 }
 \DeclareOption{english}{%
   \def\selectdefaultlanguage{\selectlanguage{english}}%
   \def\gradu@sortlocale{en}%
+  \PassOptionsToPackage{main=english}{babel}
 }
 \def\selectdefaultlanguage{\selectlanguage{finnish}}
 \def\gradu@sortlocale{fi}

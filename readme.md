@@ -8,11 +8,27 @@ Jos et aio kehittää LaTeX-luokkaa eteenpäin, käytä yllä olevaa latausnapik
 Wiki tuossa vasemmalla tulee myöhemmin sisältämään hyödyllistä tietoa latexin ja tutkielmapohjan käytöstä.
 
 # Software you'll need:
-* latex or pdflatex
-* biber
+* A LaTeX driver program such as `lualatex` or `xelatex` (recommended) or else
+  the older `pdflatex`
+* The `biber` bibliography processing backend
+* Various LaTeX packages
 
+These are all included in a TeX distribution such as [TeX
+Live](https://www.tug.org/texlive/).
 
-# How to run it:
+# Build using `latexmk`
+
+Simply use the following to watch the your tex file and continually compile it with preview:
+
+```
+latexmk -pvc somefile
+```
+
+See [`man latexmk`](https://manpages.org/latexmk) for how to configure the
+driver program and PDF viewer.
+
+# Manual build:
+
 ```
 $ latex somefile.tex
 $ biber somefile # if somefile.bib is your bibliography

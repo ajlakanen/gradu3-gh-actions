@@ -176,6 +176,27 @@ tai laadullisen tutkimustuön teoriaosa.  Muita samantyyppisiä
 tutkielmia ja julkaistuja tutkimusraportteja lukemalla saat kyllä
 käsityksen siitä, mitä omalta työltäsi vaaditaan.
 
+\subsection{Matematiikka}
+
+Saatat hyvinkin joutua käyttämään matemaattisia merkintöjä opinnäytetyössäsi.
+Ellei sinulla ole muuta syytä, on hyvä käytäntö käyttää eri pakettien
+ominaisuuksia seuraavassa järjestyksessä. Suosi eniten korkean tason
+ominaisuuksia paketeista \texttt{amsmath}-paketista
+\parencite[katso][]{amsmath-manual}, sitten \LaTeX-paketista.
+\parencite[katso][]{lamport94:_latex} ja sitten itse \TeX-paketista
+\parencite[katso][]{knuth86:_texbook}. Edellä mainitut käsikirjat ovat
+englanninkielisiä, mutta \fullcite{kaijanaho03:_latex_ams_latex} antaa
+yleiskatsauksen näistä aiheista suomeksi. Havainnollistuksena tässä on
+kvadraattisen kaavan derivaatta täydentämällä neliö käyttäen
+\texttt{align*}-ympäristön \texttt{amsmath}-paketista:
+
+\begin{align*}
+  ax^2 + bx + c &= 0 && \text{Aloitamme yleisestä neliöyhtälöstä} \\
+  x^2 + \frac{b}{a}x + \frac{b}{2a}^2 &= -\frac{c}{a} + \frac{b}{2a}^2 && \text{Algebrinen uudelleenjärjestely} \\
+  \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2 - 4ac}{4a^2} && \text{Täydennä neliö} \\
+  x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} && \text{Ratkaise x}
+\end{align*}
+
 \section{Teorian jälkeen}
 
 Teoriaosan jälkeen tulee työsi varsinainen kontribuutio:

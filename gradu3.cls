@@ -86,9 +86,11 @@
 \RequirePackage[left=35mm,right=20mm,top=35mm,bottom=35mm,nohead]{geometry}
 \RequirePackage[finnish,english]{babel}
 \ifxetexorluatex
+  \usepackage{unicode-math}
   \RequirePackage{fontspec}
   \setmainfont{TeX Gyre Termes}
   \setsansfont{TeX Gyre Heros}
+  \setmathfont{TeX Gyre Termes Math}
   \setmonofont[
     Ligatures=NoCommon
   ]{TeX Gyre Cursor}

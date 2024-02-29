@@ -1,7 +1,7 @@
 % Originally written by Antti-Juhani Kaijanaho on December 2002.
 % You may treat this file as if it were in the public domain.
 % Subsequently modified by Matthieu Weber and Antti-Juhani Kaijanaho.
-% Currently maintained by Antti-Juhani Kaijanaho <antti-juhani.kaijanaho@jyu.fi>
+% Later changes made by Frankie Robertson
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                     PLEASE READ THE MANUAL!                           %%
@@ -36,10 +36,12 @@
 \DeclareOption{finnish}{%
   \def\selectdefaultlanguage{\selectlanguage{finnish}}%
   \def\gradu@sortlocale{fi}%
+  \PassOptionsToPackage{main=finnish}{babel}
 }
 \DeclareOption{english}{%
   \def\selectdefaultlanguage{\selectlanguage{english}}%
   \def\gradu@sortlocale{en}%
+  \PassOptionsToPackage{main=english}{babel}
 }
 \def\selectdefaultlanguage{\selectlanguage{finnish}}
 \def\gradu@sortlocale{fi}
@@ -57,21 +59,49 @@
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 
+% Define ifxetexorluatextrue
+\RequirePackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% REQUIRED PACKAGES
 
-\RequirePackage{fixltx2e}
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname IncludeInRelease\endcsname\relax
+  \usepackage{fixltx2e}
+\fi
 \RequirePackage{ifthen}
 \RequirePackage{chngcntr}
 \RequirePackage{everyshi}[1994/12/09]
-\RequirePackage{inputenc}
-\RequirePackage[T1]{fontenc}
 \RequirePackage[left=35mm,right=20mm,top=35mm,bottom=35mm,nohead]{geometry}
 \RequirePackage[finnish,english]{babel}
-\RequirePackage{mathptmx}
-\RequirePackage[scaled=.92]{helvet}
-\RequirePackage{courier}
+\ifxetexorluatex
+  \usepackage{unicode-math}
+  \RequirePackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}
+  \setmathfont{TeX Gyre Termes Math}
+  \setmonofont[
+    Ligatures=NoCommon
+  ]{TeX Gyre Cursor}
+\else
+  \RequirePackage{inputenc}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{mathptmx}
+  \RequirePackage[scaled=.92]{helvet}
+  \RequirePackage{courier}
+\fi
+\RequirePackage{csquotes}
 \ifgradu@stdbib
 \RequirePackage[authordate,backend=biber,sortlocale=\gradu@sortlocale,noibid]{biblatex-chicago}
 \fi

@@ -131,7 +131,7 @@ Tutkielma-TeX mailing list
 also send comments, suggestions for improvement and bug reports
 directly to me.
 
-\begin{figure}[h]\centering
+\begin{figure}[ht]\centering
   \includegraphics[height=5cm,keepaspectratio]{opus-kissa}
   \caption[The cover picture of my Finnish-language \LaTeX\ guide
   \parencite{kaijanaho03:_latex_ams_latex}]{The cover picture of my
@@ -191,6 +191,26 @@ empirical study that is based on the traditions of the behavioral or
 the social sciences.  Reading other theses of the same type, as well
 as similar published research reports, will give you a good impression
 of what is required of your own thesis.
+
+\subsection{Mathematics}
+
+You may well need to use mathematical notation in your thesis. Unless you have
+a reason otherwise, it is good practice to use features from different packages
+in preference-order. Prefer most the high level features from the
+\texttt{amsmath} package \parencite[see][]{amsmath-manual}, then from \LaTeX
+\parencite[see][]{lamport94:_latex}, and then from \TeX itself
+\parencite[see][]{knuth86:_texbook}. The aforementioned manuals are in English,
+but \fullcite{kaijanaho03:_latex_ams_latex} gives an overview of these topics
+in Finnish. As a demonstration, here is a derivation of the quadratic formula
+by completing the square using the \texttt{align*} environment from the
+\texttt{amsmath} package:
+
+\begin{align*}
+  ax^2 + bx + c &= 0 && \text{We start from a general quadratic equation} \\
+  x^2 + \frac{b}{a}x + \frac{b}{2a}^2 &= -\frac{c}{a} + \frac{b}{2a}^2 && \text{Algebric rearrangement} \\
+  \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2 - 4ac}{4a^2} && \text{Complete the square} \\
+  x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} && \text{Solve for x}
+\end{align*}
 
 \section{After the theory}
 
@@ -560,7 +580,7 @@ with \LaTeX.  There are, however, some differences:
 \item Specify the metadata of your thesis using the commands given in
   Table~\ref{tbl:metatiedot}.  They must be given before the
   {\string\maketitle} command.
-\begin{table}[h]\centering
+\begin{table}[ht]\centering
   \begin{tabular}{lp{9cm}}
     \toprule
     Command & Meaning \\

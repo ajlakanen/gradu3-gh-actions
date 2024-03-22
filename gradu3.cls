@@ -24,6 +24,9 @@
 \newif\ifgradu@stdbib
 \gradu@stdbibtrue
 
+\newif\ifgradu@accessibility
+\gradu@accessibilityfalse
+
 \newif\ifgradu@bsc
 \gradu@bscfalse
 
@@ -32,6 +35,7 @@
   \gdef\gradu@default@@type{\gradu@bachelortype}%
   \gradu@bsctrue}
 \DeclareOption{manualbib}{\gradu@stdbibfalse}
+\DeclareOption{accessibility}{\gradu@accessibilitytrue}
 
 \DeclareOption{finnish}{%
   \def\selectdefaultlanguage{\selectlanguage{finnish}}%
@@ -103,6 +107,9 @@
 \fi
 \RequirePackage{csquotes}
 \ifgradu@stdbib
+\ifgradu@accessibility
+\PassOptionsToPackage{footmarkoff}{biblatex-chicago}
+\fi
 \RequirePackage[authordate,backend=biber,sortlocale=\gradu@sortlocale,noibid]{biblatex-chicago}
 \fi
 

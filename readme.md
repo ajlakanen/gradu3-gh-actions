@@ -1,7 +1,7 @@
 # Lue ensin / First
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.en.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README.es.md)
+[![en](https://img.shields.io/badge/lang-fi-green.svg)](README.md)
+[![es](https://img.shields.io/badge/lang-en-green.svg)](README.en.md)
 
 *Lue* ensin `malliopas.tex`.  Se auttaa sinua oppimaan LaTeXin ja kandi/gradupohjan käyttöä.
 Jos et aio kehittää LaTeX-luokkaa eteenpäin, käytä yllä olevaa latausnapikkaa, älä turhaan kloonaa projektia.

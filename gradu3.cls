@@ -221,15 +221,15 @@
 \def\gradu@abstract{\gradu@muistitko{abstract}}
 \long\def\abstract#1{\gdef\gradu@abstract{\begin{foreignlanguage}{english}#1\end{foreignlanguage}}}
 
-%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% BASIC FORMATTING
 
 % make twoside behave the same as oneside
 \raggedbottom
 
 % This matches Word 1.5 line spacing in our empirical tests.
-\renewcommand{\baselinestretch}{1.43}  
+\renewcommand{\baselinestretch}{1.43}
 
 \setlength\parindent{0pt}
 \setlength\parskip{10pt}
@@ -481,9 +481,9 @@
     \gradu@map\gradu@f\gradu@metadatacommands%
   }%
   \global\let\author\gradu@toolate%
-  \global\let\date\gradu@toolate%  
-  \global\let\tiivistelma\gradu@toolate%  
-  \global\let\abstract\gradu@toolate%  
+  \global\let\date\gradu@toolate%
+  \global\let\tiivistelma\gradu@toolate%
+  \global\let\abstract\gradu@toolate%
 }
 
 %%

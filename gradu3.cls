@@ -428,12 +428,14 @@
       \noindent\textbf{Author\ifthenelse{\value{gradu@author@count}>1}{s}{}:} %
       \gradu@author@render{,\space}{,\space and\space}\par%
     }%
-    \iflanguage{finnish}{%
-      \noindent\textbf{Yhteystiedot:} %
-      \gradu@contactinformation@render{,\space}{\space ja\space}\par%
-    }{%
-      \noindent\textbf{Contact information:}
-      \gradu@contactinformation@render{,\space}{,\space and\space}\par%
+    \ifthenelse{\value{gradu@contactinformation@count} = 0}{}{%
+      \iflanguage{finnish}{%
+        \noindent\textbf{Yhteystiedot:} %
+        \gradu@contactinformation@render{,\space}{\space ja\space}\par%
+      }{%
+        \noindent\textbf{Contact information:}
+        \gradu@contactinformation@render{,\space}{,\space and\space}\par%
+      }%
     }%
     \ifthenelse{\NOT\boolean{gradu@bsc}\OR\value{gradu@supervisor@count}>0}{%
       \noindent{%

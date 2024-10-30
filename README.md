@@ -42,7 +42,7 @@ $ latex somefile.tex
 
 # Saavutettavuus 
 
-Sisällön saavutettavuuden varmistaminen [on osa Suomen lakia] (https://www.finlex.fi/fi/laki/alkup/2019/20190306).
+Sisällön saavutettavuuden varmistaminen [on osa Suomen lakia](https://www.finlex.fi/fi/laki/alkup/2019/20190306).
 Yksi tunnetuimmista sähköisen tulostuksen arkistoista, arXiv, [suosittelee LaTeX-dokumenttien tekemistä viemällä ne HTML-muotoon](https://info.arxiv.org/about/accessible_HTML.html).
 JYU Open Science Center ei kuitenkaan ole päättänyt tukea tätä lähestymistapaa.
 [Ohjeidensa mukaan](https://openscience.jyu.fi/en/thesis-tutorial/bachelors-masters-thesis/publishing-your-thesis/thesis-accessibility) he ovat päättäneet tukea tagged PDF:ää, joka on vasta viime aikoina saanut laajaa tukea PDF-tiedostoissa.

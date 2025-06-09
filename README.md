@@ -14,7 +14,7 @@ Wiki tuossa vasemmalla tulee myöhemmin sisältämään hyödyllistä tietoa lat
 * Joku LaTeX-toteutus, esim: 
   - `lualatex`
   - `xelatex`
-  - `pdflatex`
+  - `pdflatex` (vanhentumassa, kokeile ensin lualatexia)
 * `biber`  kirjallisuusviitteiden hallintaan 
 * Joitain LaTeX-paketteja 
 

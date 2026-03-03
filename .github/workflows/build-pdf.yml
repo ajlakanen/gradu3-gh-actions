@@ -25,6 +25,7 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: tex/malliopas.tex
+          working_directory: tex
           latexmk_use_lualatex: true
 
       - name: Upload PDF artifact
